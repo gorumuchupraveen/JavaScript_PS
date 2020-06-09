@@ -5,7 +5,7 @@
 //  Else If the condition cuurent hours greater than 13PM and less than 18PM then say Good afternoon on console
 
 // Else Good Night
- 
+
 let hours = new Date();
 
 if (hours.getHours() >= 1 && hours.getHours() <= 12) {
@@ -16,26 +16,36 @@ if (hours.getHours() >= 1 && hours.getHours() <= 12) {
   console.log("good Mooringin" + " " + " cuurent time is", hours);
 }
 
-
 // ===========Switch Case ==========//
 
-let employee = 'webDesigner' ;
+let employee = "webDesigner";
 
 switch (employee) {
-  case 'webDesigner':
-  console.log('Front End Developer');
-  break;
+  case "webDesigner":
+    console.log("Front End Developer");
+    break;
 
-  case 'webDeveloper':
-  console.log('Back End Developer');
-  break;
+  case "webDeveloper":
+    console.log("Back End Developer");
+    break;
 
-  default : console.log('Full stack Developer');
+  default:
+    console.log("Full stack Developer");
 }
 
 // =========For Loop ============//
 
-for (let i = 1; i <= 5; i++ ){
-   console.log(i)
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
 
+// =========While Loop ============//
+
+let i = 5;
+
+while (i <= 5) {
+  if (i % 2 !== 0) {
+    i++;
+    console.log(i);
+  }
 }
