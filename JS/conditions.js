@@ -129,10 +129,20 @@ function speedTest(speed) {
 }
 
 // ====Even Odd Number ===//
-CheckNumber(10)
+CheckNumber(8);
 function CheckNumber(numberValue) {
   for (i = 0; i <= numberValue; i++) {
     const message = i % 2 === 0 ? "Even" : "Odd";
     console.log(i, message);
   }
+}
+
+// ========Count True values in Array========//
+
+const array = [null, undefined, "", 0, 1, 2, 3];
+console.log('ture values are', countTure(array))
+function countTure(array) {
+  let count = 0;
+  for (let values of array) if (values) count++;
+  return count;
 }
