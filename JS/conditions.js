@@ -93,7 +93,7 @@ function max(a, b) {
 // if the typeof number is divisible by 4,2 then return "Front end Developer"
 // if the typeof number is Not a number  then return "NaN"
 
-const status = fizzBuzz();
+const status = fizzBuzz(5);
 console.log("Input type is", status);
 function fizzBuzz(input) {
   if (typeof input !== "number") return "Not a number";
@@ -101,4 +101,38 @@ function fizzBuzz(input) {
   if (input % 2 !== 0 && input % 4 !== 0) return "Back End Developer";
   if (input % 2 === 0) return "Designer";
   if (input % 4 === 0) return "Web Designer";
+}
+
+//===pped Test ====//
+// if speed greathan equal to 75 then "Ok"
+// if the spped more than 75 add points
+// Add each 1 points to spped 5 kms incremantly after reach 75kms
+// if 12 points "suspended"
+
+speedTest(140);
+
+function speedTest(speed) {
+  const speedLmit = 70;
+  const kmPerpoint = 5;
+
+  if (speed <= speedLmit + kmPerpoint) {
+    console.log("your speed is ok", speed);
+    return;
+  } else {
+    const points = Math.floor(speed - speedLmit) / kmPerpoint;
+    if (points >= 15) {
+      console.log("Your License is Suspended", speed);
+    } else {
+      console.log("Your speed is ", speed, " & ", points, "points added");
+    }
+  }
+}
+
+// ====Even Odd Number ===//
+CheckNumber(10)
+function CheckNumber(numberValue) {
+  for (i = 0; i <= numberValue; i++) {
+    const message = i % 2 === 0 ? "Even" : "Odd";
+    console.log(i, message);
+  }
 }
