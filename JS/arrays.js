@@ -172,7 +172,7 @@ console.log(courses);
 // ====Reducing arrays ===//
 // Returns single sum of an arrays
 
-const numberList = [-1,2,1,3,2];
+const numberList = [-1,2,1,3,2,1];
 
 const reduceList = numberList.reduce((accumulator,currentValue) =>
 accumulator + currentValue,1
@@ -192,15 +192,27 @@ function arrayFromList(min,max){
     return outputArray;
 };
 
-// includes method 
-// Returns true whether the item is exists from an arrayFromList
+// ==========Returns true whether the item is exists from an arrayFromList======//
 
-const numbersList = [1,2,3,-1,-20];
-console.log(existsInclude(numberList,-8));
+// const numbersList = [1,1,2,3,-1,-20];
+console.log(include(numberList,-8));
 
-function existsInclude(array,existElements){
+function include(array,existElements){
   for (elements of array)
   if(elements === existElements)
   return true;
   return false;
 };
+
+// Exclude Method
+// Exclude elements from the array 
+
+
+function exclude(array, excludeElements){
+  let outputElements = [];
+  for (exElements of array)
+  if(!excludeElements.includes(exElements))
+    outputElements.push(exElements);
+    return outputElements;
+}
+console.log(exclude(numberList, [1,2]))
