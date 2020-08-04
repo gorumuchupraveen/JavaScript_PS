@@ -181,10 +181,11 @@ console.log(reduceList);
 
 // Array from range min value to max value 
 
-const values = arrayFromList(10,-2);
-console.log(values)
+const values = arrayFromList(-2,8);
+values.reverse();
+console.log(values);
 
-function arrayFromList(max,min){
+function arrayFromList(min,max){
   let outputArray =[];
   for (i=min; i<=max; i++)
     outputArray.push(i);
