@@ -168,3 +168,25 @@ courses.sort((a, b) => {
   return 0;
 });
 console.log(courses);
+
+// ====Reducing arrays ===//
+// Returns single sum of an arrays
+
+const numberList = [-1,2,1,3,2];
+
+const reduceList = numberList.reduce((accumulator,currentValue) =>
+accumulator + currentValue,1
+);
+console.log(reduceList);
+
+// Array from range min value to max value 
+
+const values = arrayFromList(10,-2);
+console.log(values)
+
+function arrayFromList(max,min){
+  let outputArray =[];
+  for (i=min; i<=max; i++)
+    outputArray.push(i);
+    return outputArray;
+}
