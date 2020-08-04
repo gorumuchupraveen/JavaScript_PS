@@ -190,4 +190,17 @@ function arrayFromList(min,max){
   for (i=min; i<=max; i++)
     outputArray.push(i);
     return outputArray;
-}
+};
+
+// includes method 
+// Returns true whether the item is exists from an arrayFromList
+
+const numbersList = [1,2,3,-1,-20];
+console.log(existsInclude(numberList,-8));
+
+function existsInclude(array,existElements){
+  for (elements of array)
+  if(elements === existElements)
+  return true;
+  return false;
+};
